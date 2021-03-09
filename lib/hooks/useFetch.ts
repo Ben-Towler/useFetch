@@ -59,7 +59,7 @@ export const useFetch = <T>(
           payload: cache[requestKey],
         });
 
-        return stateRef.current;
+        stateRef.current = cache[requestKey];
       }
       
       dispatch({ type: ActionType.REQUEST });
